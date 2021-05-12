@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pZd-Eo-lGU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launches View Controller-->
+        <scene sceneID="L9k-c7-6zn">
+            <objects>
+                <viewController id="pZd-Eo-lGU" customClass="LaunchesViewController" customModule="Space_X_Sean_Lintern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dph-kE-0pt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kN9-0w-QRc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4q-nZ-6sy">
+                                <rect key="frame" x="16" y="453" width="382" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qdz-jh-dPT">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" systemColor="labelColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Tc-hP-DlE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kN9-0w-QRc" firstAttribute="top" secondItem="7Tc-hP-DlE" secondAttribute="top" id="Aly-V3-RWz"/>
+                            <constraint firstItem="7Tc-hP-DlE" firstAttribute="bottom" secondItem="kN9-0w-QRc" secondAttribute="bottom" id="Oot-HJ-syD"/>
+                            <constraint firstItem="p4q-nZ-6sy" firstAttribute="centerX" secondItem="7Tc-hP-DlE" secondAttribute="centerX" id="Pga-px-Uhr"/>
+                            <constraint firstItem="p4q-nZ-6sy" firstAttribute="centerY" secondItem="7Tc-hP-DlE" secondAttribute="centerY" id="RWT-e4-36p"/>
+                            <constraint firstItem="qdz-jh-dPT" firstAttribute="centerY" secondItem="7Tc-hP-DlE" secondAttribute="centerY" id="WPW-eP-xTf"/>
+                            <constraint firstItem="7Tc-hP-DlE" firstAttribute="trailing" secondItem="p4q-nZ-6sy" secondAttribute="trailing" constant="16" id="dQk-Kd-wzG"/>
+                            <constraint firstItem="qdz-jh-dPT" firstAttribute="centerX" secondItem="7Tc-hP-DlE" secondAttribute="centerX" id="mtR-ek-yBZ"/>
+                            <constraint firstItem="kN9-0w-QRc" firstAttribute="leading" secondItem="7Tc-hP-DlE" secondAttribute="leading" id="tJH-0N-Per"/>
+                            <constraint firstItem="7Tc-hP-DlE" firstAttribute="trailing" secondItem="kN9-0w-QRc" secondAttribute="trailing" id="tUk-Us-dPZ"/>
+                            <constraint firstItem="p4q-nZ-6sy" firstAttribute="leading" secondItem="7Tc-hP-DlE" secondAttribute="leading" constant="16" id="wYJ-1G-xG0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorText" destination="p4q-nZ-6sy" id="zj4-bd-if4"/>
+                        <outlet property="loader" destination="qdz-jh-dPT" id="u4M-Cj-7zS"/>
+                        <outlet property="tableView" destination="kN9-0w-QRc" id="ohK-h1-fc7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HII-av-2m0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
